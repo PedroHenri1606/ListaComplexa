@@ -1,23 +1,17 @@
+package model;
+
 import java.util.List;
 
 public class Pessoa {
+
     private String nome;
     private Integer idade;
+    private List<Endereco> enderecos;
 
-    private Endereco endereco;
-
-    public Pessoa(String nome, Integer idade, Endereco endereco) {
+    public Pessoa(String nome, Integer idade, List<Endereco> enderecos) {
         this.nome = nome;
         this.idade = idade;
-        this.endereco = endereco;
-    }
-
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
+        this.enderecos = enderecos;
     }
 
     public String getNome() {
@@ -36,8 +30,11 @@ public class Pessoa {
         this.idade = idade;
     }
 
-    public Pessoa(String nome, Integer idade) {
-        this.nome = nome;
-        this.idade = idade;
+    public List<Endereco> getEnderecos() {
+        return enderecos;
+    }
+
+    public void setEnderecos(List<Endereco> enderecos) {
+        this.enderecos = enderecos;
     }
 }
